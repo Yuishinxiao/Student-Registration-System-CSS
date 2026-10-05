@@ -1,0 +1,247 @@
+:root {
+    --lavender: #e6e0f8;
+    --lavender-light: #f3f0fc;
+    --purple: #7b61c9;
+    --text: #333333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--lavender);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.site-header {
+    background-color: var(--purple);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.3rem;
+    color: var(--purple);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 30px;
+    align-items: start;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+table,
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+.card {
+    min-width: 0;
+    background-color: white;
+    padding: 25px 30px;
+    border: 1px solid #c9bfee;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label,
+.group-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 9px 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #b9aee0;
+    border-radius: 4px;
+    background-color: var(--lavender-light);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--purple);
+    background-color: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.option-group.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--purple);
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--purple);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #634aa8;
+}
+
+.btn-secondary {
+    background-color: #dcd4f3;
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    background-color: #cdc2ee;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.student-table th,
+.student-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #c9bfee;
+}
+
+.student-table thead th {
+    background-color: var(--purple);
+    color: white;
+}
+
+.student-table tbody tr:nth-child(even) {
+    background-color: var(--lavender-light);
+}
+
+.student-table tbody tr:hover {
+    background-color: var(--lavender);
+}
+
+@media (max-width: 960px) {
+    .container {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .option-group.skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        padding: 12px;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .student-table {
+        font-size: 0.8rem;
+    }
+
+    .student-table th,
+    .student-table td {
+        padding: 6px;
+    }
+
+    .button-group {
+        flex-wrap: wrap;
+    }
+}

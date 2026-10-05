@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>Student Registration System</h1>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <form action="#" method="post" id="registration-form">
+                <h2>Registration Form</h2>
+
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Juan Dela Cruz" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="juan@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" minlength="8" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="15" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Birth Date:</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <span class="group-title">Gender:</span>
+                    <div class="option-group">
+                        <label class="option" for="male">
+                            <input type="radio" id="male" name="gender" value="Male" required> Male
+                        </label>
+                        <label class="option" for="female">
+                            <input type="radio" id="female" name="gender" value="Female"> Female
+                        </label>
+                        <label class="option" for="other">
+                            <input type="radio" id="other" name="gender" value="Other"> Other
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">-- Select Course --</option>
+                        <option value="BSIT">BS Information Technology</option>
+                        <option value="BSCS">BS Computer Science</option>
+                        <option value="BSBA">BS Business Administration</option>
+                        <option value="BSED">BS Education</option>
+                        <option value="BSN">BS Nursing</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <span class="group-title">Skills:</span>
+                    <div class="option-group skills">
+                        <label class="option" for="teamwork">
+                            <input type="checkbox" id="teamwork" name="skills" value="Teamwork"> Teamwork
+                        </label>
+                        <label class="option" for="communication">
+                            <input type="checkbox" id="communication" name="skills" value="Communication"> Communication
+                        </label>
+                        <label class="option" for="leadership">
+                            <input type="checkbox" id="leadership" name="skills" value="Leadership"> Leadership
+                        </label>
+                        <label class="option" for="problemsolving">
+                            <input type="checkbox" id="problemsolving" name="skills" value="Problem Solving"> Problem Solving
+                        </label>
+                        <label class="option" for="timemanagement">
+                            <input type="checkbox" id="timemanagement" name="skills" value="Time Management"> Time Management
+                        </label>
+                        <label class="option" for="creativity">
+                            <input type="checkbox" id="creativity" name="skills" value="Creativity"> Creativity
+                        </label>
+                        <label class="option" for="criticalthinking">
+                            <input type="checkbox" id="criticalthinking" name="skills" value="Critical Thinking"> Critical Thinking
+                        </label>
+                        <label class="option" for="adaptability">
+                            <input type="checkbox" id="adaptability" name="skills" value="Adaptability"> Adaptability
+                        </label>
+                        <label class="option" for="organization">
+                            <input type="checkbox" id="organization" name="skills" value="Organization"> Organization
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Registered Students</h2>
+            <div class="table-wrapper">
+                <table class="student-table">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Full Name</th>
+                            <th>Course</th>
+                            <th>Year Level</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5250524</td>
+                            <td>Fritz Catayas</td>
+                            <td>BSIT</td>
+                            <td>1st Year</td>
+                            <td>fritz.catayas@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>5250522</td>
+                            <td>Rhian Marie Nardo</td>
+                            <td>BSCS</td>
+                            <td>2nd Year</td>
+                            <td>marie.nardo@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>5250521</td>
+                            <td>Vince Taperla</td>
+                            <td>BSBA</td>
+                            <td>3rd Year</td>
+                            <td>vince.taperla@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>5250520</td>
+                            <td>Jeff Garcia</td>
+                            <td>BSED</td>
+                            <td>1st Year</td>
+                            <td>jeff.garcia@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>5250523</td>
+                            <td>Carl Ernest Mosquera</td>
+                            <td>BSIT</td>
+                            <td>4th Year</td>
+                            <td>carlo.ernest@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
